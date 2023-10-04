@@ -4,40 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator Using JavaScript Original</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Your 1 Stop Calculator</h1>
     <div class="container">
       <div class="calculator">
+        <h1>JavaScript Calculator</h1>
+
         <form action="">
           <div class="display">
             <input type="text" name="display" />
           </div>
           <div>
-            <input type="button" value="AC" onclick="display.value=''" />
-            <input type="button" value="DEL" onclick="display.value=''" />
-            <input type="button" value="." onclick="display.value+='.'" />
-            <input type="button" value="÷" onclick="display.value+='/'" />
+            <hr />
+            <input
+              class="operator"
+              type="button"
+              value="AC"
+              onclick="display.value=''"
+            />
+            <input
+              type="button"
+              value="DEL"
+              class="operator"
+              onclick="display.value=display.value.toString().slice(0,-1)"
+            />
+            <input
+              class="operator"
+              type="button"
+              value="."
+              onclick="display.value+='.'"
+            />
+            <input
+              class="operator"
+              type="button"
+              value="/"
+              onclick="display.value+='/'"
+            />
           </div>
           <div>
             <input type="button" value="7" onclick="display.value+='7'" />
             <input type="button" value="8" onclick="display.value+='8'" />
             <input type="button" value="9" onclick="display.value+='9'" />
-            <input type="button" value="x" onclick="display.value+='*'" />
+            <input
+              class="operator"
+              type="button"
+              value="x"
+              onclick="display.value+='*'"
+            />
           </div>
           <div>
             <input type="button" value="4" onclick="display.value+='4'" />
             <input type="button" value="5" onclick="display.value+='5'" />
             <input type="button" value="6" onclick="display.value+='6'" />
-            <input type="button" value="-" onclick="display.value+='-'" />
+            <input
+              class="operator"
+              type="button"
+              value="-"
+              onclick="display.value+='-'"
+            />
           </div>
           <div>
             <input type="button" value="1" onclick="display.value+='1'" />
             <input type="button" value="2" onclick="display.value+='2'" />
             <input type="button" value="3" onclick="display.value+='3'" />
-            <input type="button" value="+" onclick="display.value+='+'" />
+            <input
+              class="operator"
+              type="button"
+              value="+"
+              onclick="display.value+='+'"
+            />
           </div>
           <div>
             <input type="button" value="00" onclick="display.value+='00'" />
@@ -46,6 +83,7 @@
               class="equal"
               type="button"
               value="="
+              class="operator"
               onclick="display.value=eval(display.value)"
             />
           </div>
